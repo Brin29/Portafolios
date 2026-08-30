@@ -1,0 +1,11 @@
+{
+  "title": "PORTAFOLIO",
+  "technologies": "REACT.JS & NEXT.JS",
+  "name": "BREINER PARRA",
+  "speciality": "FRONTEND DEVELOPER",
+  "mainImg": "https://picsum.photos/seed/hero-main/1600/2000",
+  "secondImg": "https://picsum.photos/seed/hero-grid/1200/900",
+  "thirdImg": "https://picsum.photos/seed/hero-type/900/1200",
+  "fourthImg": "https://picsum.photos/seed/hero-terminal/800/800",
+  "fifthImg": "https://picsum.photos/seed/hero-frame/1000/700"
+}

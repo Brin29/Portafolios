@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Tokens + themes */
+@import "./styles/tokens/colors.css";
+@import "./styles/tokens/typography.css";
+@import "./styles/tokens/layout.css";
+@import "./styles/theme/light.css";
+@import "./styles/theme/dark.css";
+@import "./styles/utilities.css";
 
+/* Class-based dark mode (toggled on <html> via .dark / data-theme). */
+@custom-variant dark (&:where(.dark, [data-theme="dark"]));
+
+/*
+ * Expose semantic tokens to Tailwind utilities via @theme inline.
+ * This lets us use utilities like bg-background, text-foreground, bg-accent,
+ * border-border, font-display, leading-display, etc.
+ */
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-invert: var(--surface-invert);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-invert: var(--text-invert);
+
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-focus: var(--focus);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius: var(--radius);
+
+  --tracking-display: var(--tracking-display);
+  --leading-display: var(--leading-display);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Base layer: apply tokens to primitives. */
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+
+  *:focus-visible {
+    outline: var(--border-thick) solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }

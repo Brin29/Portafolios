@@ -1,0 +1,43 @@
+/*
+ * Typography tokens.
+ * Display = heavy grotesque (Archivo Black), uppercase, tight tracking,
+ * compressed leading, fluid clamp scale for macro-type.
+ * Mono = metadata / telemetry labels. Sans = body.
+ */
+
+:root {
+  /* Fluid display scale (brutalist macro-typography) */
+  --text-display-6xl: clamp(3rem, 9vw, 7rem);
+  --text-display-5xl: clamp(2.5rem, 7vw, 5.5rem);
+  --text-display-4xl: clamp(2rem, 5vw, 4rem);
+  --text-display-3xl: clamp(1.75rem, 4vw, 3rem);
+  --text-display-2xl: clamp(1.5rem, 3vw, 2.25rem);
+
+  /* Body scale */
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+
+  /* Micro / metadata scale */
+  --text-micro: 0.6875rem;
+  --text-meta: 0.75rem;
+
+  /* Display weight (Archivo Black is a single 400 weight but renders heavy) */
+  --weight-display: 400;
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+
+  /* Display track (tight) and leading (compressed) */
+  --tracking-display: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-mono: 0.12em;
+  --leading-display: 0.88;
+  --leading-display-soft: 0.95;
+  --leading-relaxed: 1.6;
+
+  /* Font family aliases (set by next/font via fonts.ts variables) */
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}

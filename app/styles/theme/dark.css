@@ -1,0 +1,35 @@
+/*
+ * DARK THEME
+ * Substrate: off-black (deactivated CRT, not pure #000).
+ * Accent: aviation red. Text: white phosphor.
+ */
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --background: var(--color-off-black);
+  --surface: var(--color-carbon);
+  --surface-muted: var(--color-grey-800);
+  --surface-invert: var(--color-paper);
+
+  /* Text */
+  --foreground: var(--color-grey-100);
+  --text-muted: var(--color-grey-400);
+  --text-faint: var(--color-grey-500);
+  --text-invert: var(--color-ink);
+
+  /* Accent (locked red, consistent across the page) */
+  --accent: var(--color-red-500);
+  --accent-strong: var(--color-red-400);
+  --accent-soft: var(--color-grey-800);
+  --on-accent: var(--color-off-white);
+
+  /* Borders & rules */
+  --border: var(--color-grey-600);
+  --border-subtle: var(--color-grey-700);
+
+  /* Focus ring */
+  --focus: var(--color-red-500);
+}

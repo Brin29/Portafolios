@@ -1,0 +1,62 @@
+/*
+ * Brutalist typography & structural utilities.
+ * Centralised so every section shares the same display / meta language.
+ */
+
+@layer utilities {
+  /* Macro display type: heavy grotesque, uppercase, tight, compressed */
+  .type-display {
+    font-family: var(--font-display);
+    font-weight: var(--weight-display);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-display);
+    line-height: var(--leading-display);
+  }
+
+  /* Sizes fed by the fluid display scale */
+  .display-6xl { font-size: var(--text-display-6xl); }
+  .display-5xl { font-size: var(--text-display-5xl); }
+  .display-4xl { font-size: var(--text-display-4xl); }
+  .display-3xl { font-size: var(--text-display-3xl); }
+  .display-2xl { font-size: var(--text-display-2xl); }
+
+  /* Metadata / telemetry micro-labels */
+  .type-meta {
+    font-family: var(--font-mono);
+    /* font-size: var(--text-meta); */
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-mono);
+    line-height: 1.2;
+    color: var(--text-muted);
+  }
+
+  .type-micro {
+    font-family: var(--font-mono);
+    /* font-size: var(--text-micro); */
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-mono);
+    line-height: 1.2;
+    color: var(--text-faint);
+  }
+
+  /* Structural containers */
+  .container-site {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+  }
+
+  .section-pad {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+  }
+
+  /* Brute borders */
+  .border-brutal {
+    border: var(--border-thick) solid var(--border);
+  }
+  .border-hairline {
+    border-top: var(--border-thin) solid var(--border-subtle);
+  }
+}

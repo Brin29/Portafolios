@@ -1,0 +1,36 @@
+/*
+ * LIGHT THEME
+ * Substrate: off-white (Swiss industrial print paper).
+ * Accent: aviation red. Text: carbon ink (off-black).
+ */
+
+:root,
+.light,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces */
+  --background: var(--color-off-white);
+  --surface: var(--color-paper);
+  --surface-muted: var(--color-grey-200);
+  --surface-invert: var(--color-carbon);
+
+  /* Text */
+  --foreground: var(--color-carbon);
+  --text-muted: var(--color-grey-600);
+  --text-faint: var(--color-grey-500);
+  --text-invert: var(--color-off-white);
+
+  /* Accent (locked red, consistent across the page) */
+  --accent: var(--color-red-600);
+  --accent-strong: var(--color-red-500);
+  --accent-soft: var(--color-red-100);
+  --on-accent: var(--color-off-white);
+
+  /* Borders & rules */
+  --border: var(--color-carbon);
+  --border-subtle: var(--color-grey-300);
+
+  /* Focus ring */
+  --focus: var(--color-red-600);
+}

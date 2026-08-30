@@ -1,0 +1,33 @@
+/*
+ * Raw palette used by the light/dark themes.
+ * Semantic aliases (background, foreground, accent, surfaces, borders)
+ * live in theme/light.css and theme/dark.css and are themed per mode.
+ */
+
+:root {
+  /* Substrate bases (no pure black / pure white) */
+  --color-off-black: #0b0b0d;
+  --color-carbon: #121216;
+  --color-ink: #050506;
+  --color-off-white: #f4f4f0;
+  --color-paper: #ffffff;
+
+  /* Grey tonal ramp (consistent neutral family in both modes) */
+  --color-grey-950: #0b0b0d;
+  --color-grey-900: #141417;
+  --color-grey-800: #1c1c20;
+  --color-grey-700: #2a2a30;
+  --color-grey-600: #3f3f46;
+  --color-grey-500: #71717a;
+  --color-grey-400: #a1a1aa;
+  --color-grey-300: #c9c9cf;
+  --color-grey-200: #e4e4e7;
+  --color-grey-100: #f0f0f2;
+
+  /* Aviation / hazard red accent (shared across both themes) */
+  --color-red-600: #e61919;
+  --color-red-500: #ff2a2a;
+  --color-red-400: #ff4d4d;
+  --color-red-300: #ff7a7a;
+  --color-red-100: #ffdcdc;
+}
