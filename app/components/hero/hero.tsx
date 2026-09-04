@@ -1,5 +1,6 @@
 import Image from "next/image";
 import hero from "@/app/data/hero.json";
+import { RobotCanva } from "../render/RobotCanva";
 
 export function Hero() {
   return (
@@ -31,15 +32,8 @@ export function Hero() {
       </div>
 
       {/* Secondary images distributed across the page */}
-      <div className="absolute right-0 top-0 z-10 h-36 w-40 overflow-hidden border-b-2 border-l-2 border-border">
-        <Image
-          src={hero.secondImg}
-          alt=""
-          fill
-          sizes="160px"
-          className="object-cover"
-        />
-      </div>
+      {/* <Robots */}
+      <RobotCanva/>
 
       <div className="absolute bottom-0 left-[12%] z-10 hidden h-40 w-44 overflow-hidden border-r-2 border-t-2 border-border md:block">
         <Image
