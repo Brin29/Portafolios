@@ -1,7 +1,7 @@
 /*
  * LIGHT THEME
- * Substrate: off-white (Swiss industrial print paper).
- * Accent: aviation red. Text: carbon ink (off-black).
+ * Substrate: cool off-white (futuristic blueprint paper).
+ * Accent: electric blue. Text: deep navy ink.
  */
 
 :root,
@@ -21,10 +21,10 @@
   --text-faint: var(--color-grey-500);
   --text-invert: var(--color-off-white);
 
-  /* Accent (locked red, consistent across the page) */
-  --accent: var(--color-red-600);
-  --accent-strong: var(--color-red-500);
-  --accent-soft: var(--color-red-100);
+  /* Accent (electric blue, consistent across the page) */
+  --accent: var(--color-blue-600);
+  --accent-strong: var(--color-blue-500);
+  --accent-soft: var(--color-cyan-100);
   --on-accent: var(--color-off-white);
 
   /* Borders & rules */
@@ -32,5 +32,5 @@
   --border-subtle: var(--color-grey-300);
 
   /* Focus ring */
-  --focus: var(--color-red-600);
+  --focus: var(--color-blue-600);
 }

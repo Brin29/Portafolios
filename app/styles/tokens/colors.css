@@ -5,11 +5,11 @@
  */
 
 :root {
-  /* Substrate bases (no pure black / pure white) */
-  --color-off-black: #0b0b0d;
-  --color-carbon: #121216;
-  --color-ink: #050506;
-  --color-off-white: #f4f4f0;
+  /* Substrate bases (no pure black / pure white, cool navy tint) */
+  --color-off-black: #060a14;
+  --color-carbon: #0b1120;
+  --color-ink: #04060c;
+  --color-off-white: #eef2f8;
   --color-paper: #ffffff;
 
   /* Grey tonal ramp (consistent neutral family in both modes) */
@@ -24,10 +24,17 @@
   --color-grey-200: #e4e4e7;
   --color-grey-100: #f0f0f2;
 
-  /* Aviation / hazard red accent (shared across both themes) */
-  --color-red-600: #e61919;
-  --color-red-500: #ff2a2a;
-  --color-red-400: #ff4d4d;
-  --color-red-300: #ff7a7a;
-  --color-red-100: #ffdcdc;
+  /* Futuristic electric-blue accent ramp (shared across both themes) */
+  --color-blue-800: #1e3a8a;
+  --color-blue-700: #1d4ed8;
+  --color-blue-600: #2563eb;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-blue-300: #93c5fd;
+
+  /* Neon cyan — the sharp, luminous accent for highlights & focus */
+  --color-cyan-500: #22d3ee;
+  --color-cyan-400: #38e1f5;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-100: #cffafe;
 }

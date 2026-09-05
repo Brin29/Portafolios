@@ -59,4 +59,41 @@
   .border-hairline {
     border-top: var(--border-thin) solid var(--border-subtle);
   }
+
+  /* Hazard warning stripes */
+  .stripes-caution {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      var(--accent) 0px,
+      var(--accent) 8px,
+      var(--background) 8px,
+      var(--background) 16px
+    );
+  }
+
+  /* Vertical barcode bands */
+  .barcode {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--foreground) 0px,
+      var(--foreground) 2px,
+      transparent 2px,
+      transparent 5px,
+      var(--foreground) 5px,
+      var(--foreground) 6px,
+      transparent 6px,
+      transparent 11px
+    );
+  }
+
+  /* CRT phosphor scanlines */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(6, 10, 20, 0.14) 2px,
+      rgba(6, 10, 20, 0.14) 4px
+    );
+  }
 }

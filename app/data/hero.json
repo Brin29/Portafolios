@@ -3,9 +3,23 @@
   "technologies": "REACT.JS & NEXT.JS",
   "name": "BREINER PARRA",
   "speciality": "FRONTEND DEVELOPER",
-  "mainImg": "https://picsum.photos/seed/hero-main/1600/2000",
-  "secondImg": "https://picsum.photos/seed/hero-grid/1200/900",
-  "thirdImg": "https://picsum.photos/seed/hero-type/900/1200",
-  "fourthImg": "https://picsum.photos/seed/hero-terminal/800/800",
-  "fifthImg": "https://picsum.photos/seed/hero-frame/1000/700"
+  "mainImg": "/me.webp",
+  "secondImg": "/retroImg.webp",
+  "thirdImg": "/retroImg.webp",
+  "fourthImg": "/retroImg2.webp",
+  "fifthImg": "/retroImg4.webp",
+
+  "figures": {
+    "sysId": "SYS /// TH-003",
+    "unit": "[ UNIT / D-01 ]",
+    "rev": "REV 2.6",
+    "id": "ID:: BP-1987",
+    "coords": "04.2137° N / 074.1931° W",
+    "frame": "FR 0007",
+    "signal": "SIG 087 / LOCKED",
+    "phase": "PHASE 02 / DEPLOY",
+    "regMark": "®",
+    "crosshair": "+",
+    "status": "SYS CHECK <> STANDBY"
+  }
 }

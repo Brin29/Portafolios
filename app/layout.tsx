@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { display, sans, mono } from "@/app/styles/fonts";
 import "./globals.css";
+// import { RobotCanva } from "./components/render/RobotCanva";
 
 export const metadata: Metadata = {
   title: "Breiner Parra - Frontend Developer",
@@ -14,7 +15,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* <RobotCanva data-hero-robot /> */}
+        {children}
+        </body>
     </html>
   );
 }

@@ -2,25 +2,28 @@
 
 import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
-import { useRef } from "react"
+import { forwardRef, useRef } from "react"
 import * as THREE from "three"
 import { Model } from "./Robot"
 
-export const RobotCanva = () => {
-  const mouse = useRef(new THREE.Vector2(0, 0))
+export const RobotCanva = forwardRef<HTMLDivElement, Record<string, unknown>>(
+  function RobotCanva(rest, ref) {
+    const mouse = useRef(new THREE.Vector2(0, 0))
 
-  const handlePointerMove = (e: React.PointerEvent) => {
-    const rect = (e.target as HTMLElement).getBoundingClientRect()
-    mouse.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
-    mouse.current.y = -((e.clientY - rect.top) / rect.height) * 2 + 1
-  }
+    const handlePointerMove = (e: React.PointerEvent) => {
+      const rect = (e.target as HTMLElement).getBoundingClientRect()
+      mouse.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
+      mouse.current.y = -((e.clientY - rect.top) / rect.height) * 2 + 1
+    }
 
-  return (
-    <div
-      className="fixed z-100 w-full h-full rounded-2xl overflow-hidden"
-      onPointerMove={handlePointerMove}
-    >
-      <Canvas
+    return (
+      <div
+        ref={ref}
+        {...rest}
+        className="fixed z-100 w-full h-full rounded-2xl overflow-hidden"
+        onPointerMove={handlePointerMove}
+      >
+        <Canvas
         className="w-full h-full"
         shadows
         camera={{ position: [0, 3, 8], fov: 35 }}
@@ -46,15 +49,14 @@ export const RobotCanva = () => {
         <OrbitControls
           enableZoom={false}
           enableRotate={true}
-          // autoRotate={true}
-          autoRotateSpeed={0.5}
           target={[0, 0, 0]}
           makeDefault
           maxPolarAngle={Math.PI / 1.5}
           minPolarAngle={Math.PI / 3}
         />
-        <Model mouse={mouse} />
+        <Model mouse={mouse}/>
       </Canvas>
     </div>
   )
-}
+  }
+)

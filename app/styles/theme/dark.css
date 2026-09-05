@@ -1,7 +1,7 @@
 /*
  * DARK THEME
- * Substrate: off-black (deactivated CRT, not pure #000).
- * Accent: aviation red. Text: white phosphor.
+ * Substrate: deep navy (holographic night, not pure #000).
+ * Accent: neon cyan. Text: ice-white phosphor.
  */
 
 .dark,
@@ -20,16 +20,16 @@
   --text-faint: var(--color-grey-500);
   --text-invert: var(--color-ink);
 
-  /* Accent (locked red, consistent across the page) */
-  --accent: var(--color-red-500);
-  --accent-strong: var(--color-red-400);
+  /* Accent (neon cyan, luminous against navy, consistent across the page) */
+  --accent: var(--color-cyan-500);
+  --accent-strong: var(--color-cyan-400);
   --accent-soft: var(--color-grey-800);
-  --on-accent: var(--color-off-white);
+  --on-accent: var(--color-ink);
 
   /* Borders & rules */
-  --border: var(--color-grey-600);
-  --border-subtle: var(--color-grey-700);
+  --border: var(--color-blue-800);
+  --border-subtle: var(--color-blue-700);
 
   /* Focus ring */
-  --focus: var(--color-red-500);
+  --focus: var(--color-cyan-500);
 }
